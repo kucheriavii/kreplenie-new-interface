@@ -776,6 +776,62 @@ Slider (main page)
       min-width: 22px;
   }
 }
+.price-block{
+    &.no-item{
+        width: 100%;
+        max-width: 100%;
+        .price{
+            max-width: 100%;
+            width: 100%;
+            align-items: center;
+            height: 42px;
+            border-radius: 5px;
+            margin-top: 0px;
+            margin-bottom: 20px;
+            img{
+                
+            }
+            p{
+                margin-bottom: 0;
+                margin-top: -5px;
+                padding-left: 7px;
+            }
+        }
+    }
+}
+.no-stock{
+    display: flex;
+    background-color: #f5f3e9;
+    font: 17px "OpenSans-SemiBold", sans-serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 10px;
+    .no-stock-price{
+        display: block;
+        background-image: url("../img/close-stock-icon.png");
+        width: 20px;
+        height: 20px;
+        margin-right: 0px;
+        margin-top: -5px;
+    }
+}
+.cash-back{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font: 16.7px "OpenSans-SemiBold", sans-serif;
+    padding-top: 3px;
+    font-weight: normal;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 5px;
+    .cash-back--link{
+        text-decoration: underline;
+        color: #f44336;
+    }
+}
 .rating{
 	display: flex;
 	list-style-type: none;
@@ -945,6 +1001,22 @@ span.feedback{
 			color: #bdbdbd;
 		}
 	}
+}
+.item-infoblock-instruction-download{
+    display: flex;
+    width: 100%;
+    height: 63px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eaeaea;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    p{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-right: 5px;
+        margin-left: 8px;
+    }
 }
 .waranty__header:before{
 	background-image: url("../img/sheild-icon.png");
