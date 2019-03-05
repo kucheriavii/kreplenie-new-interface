@@ -28,6 +28,7 @@ $(function() {
     basketInit();
     catalogItemDetail(); //показывать детальную информацию о товаре в catalog.html
     popup(); //обработка попапов
+    orderedList();
 
    /* $(".slides-scroll__item").click(function(){
         $('.slider__item:visible .slider__item-link').click()
@@ -36,6 +37,17 @@ $(function() {
 
 
 });
+var orderedList = function (e){
+    var liCount = $('.item-main-menu__desc-ol').children("li.item-main-menu__desc-ol-li").length;
+    var olLi = $('.item-main-menu__desc-ol').children("li.item-main-menu__desc-ol-li");
+    
+    for(var count = 0;count<liCount;count++){
+        console.log(olLi.eq(count+1))
+        olLi.eq(count).prepend("<span class='desc-ol-span'>"+count+".</span>")
+    }
+    //console.log(liCount);
+}
+
 
 var searchHeader = function () {
     $('.search-box__input').focus(function(){
