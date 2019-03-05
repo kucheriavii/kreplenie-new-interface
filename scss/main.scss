@@ -1271,6 +1271,7 @@ span.feedback{
     }
     .item-main-menu__desc-table{
         border: 1px solid #eaeaea;
+        margin-bottom: 70px;
     }
     .item-main-menu__desc-table-row{
         height: 35px;
@@ -1290,6 +1291,31 @@ span.feedback{
                 text-decoration: underline;
             }
         }
+    }
+    
+    .item-main-menu__desc-table-ltl{
+        min-width: 300px;
+        width: 300px;
+        .item-main-menu__desc-table-row{
+            min-width: 300px;
+            width: 300px;
+        }
+        .item-main-menu__desc-table-td:first-child{
+            font-weight: bold;
+            padding-left: 0;
+        }
+        .item-main-menu__desc-table-row{
+            background-color: #fff;
+        }
+    }
+    
+    .show-more-link{
+        font: 16px $font-semibold;
+        color: $accent;
+        border-bottom: 1px dashed $accent;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 10px;
     }
     
 }
