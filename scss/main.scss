@@ -14,6 +14,7 @@ html{
 	height: 100%;
 }
 body {
+    counter-reset: number;
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
@@ -1176,6 +1177,7 @@ span.feedback{
     }
   }
 }
+/*Основные теги для описания товара*/
 .item-main-menu__full-block-description{
     h3{
         font: 17px $font-semibold;
@@ -1185,10 +1187,10 @@ span.feedback{
     h4{
         font: 16px $font-semibold;
     }
-    .item-main-menu__p{
+    p{
         font: 14px "OpenSans-Regular", sans-serif;
     }
-    .link-red-hovered{
+    a{
         color: #f44336;
         text-decoration: underline;
         &:hover{
@@ -1207,7 +1209,7 @@ span.feedback{
             margin-bottom: 20px;
         }
     }
-    .item-main-menu__desc-ul{
+    ul{
         margin: 0;
         padding: 0;
         list-style-type: none;
@@ -1226,6 +1228,63 @@ span.feedback{
                 background-image: url("../img/li-icon.png");
                 background-repeat: no-repeat;
                 background-position: 0 50%;
+            }
+        }
+    }
+    ol{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 35px;
+        li{
+            padding-left: 0px;
+            display: flex;
+            align-items: center;
+            font: 14px "OpenSans-Regular", sans-serif;
+            margin-top: 6px;
+            &:before{
+                counter-increment: number;
+	            content: counter(number);
+                margin-right: 10px;
+                font: 14px "OpenSans-Bold", sans-serif;
+                color: #f44336;
+                margin-right: 4px;
+                padding-right: 8px;
+            }
+        }
+        
+    }
+    table{
+        border: 1px solid #eaeaea;
+        margin-bottom: 70px;
+        width: 100%;
+        tr{
+            height: 35px;
+            width: 100%;
+            &:nth-child(2n+1){
+                background-color: #f7f7f7;
+            }
+            td{
+                width: 50%;
+                padding-left: 20px;
+                font: 14px "OpenSans-Regular", sans-serif;
+                a{
+                    color: $accent;
+                    text-decoration: underline;
+                }
+            }
+            &:first-child{
+                height: 55px;
+                border: 1px solid #eaeaea;
+                border-left: none;
+                border-right: none;
+                width: 100%;
+                td{
+                    width: 50%;
+                    align-items: center;
+                    padding-left: 20px;
+                    font: 16px $font-semibold;
+                    text-transform: uppercase;
+                }
             }
         }
     }
@@ -1316,6 +1375,15 @@ span.feedback{
         font-weight: bold;
         display: inline-block;
         margin-top: 10px;
+        text-decoration: none;
+    }
+    dfn{
+        display: inline-block;
+        font: 14px "OpenSans-Regular", sans-serif;
+        font-style: normal;
+        width: 150px;
+        font-weight: bold;
+        height: 35px;
     }
     
 }
