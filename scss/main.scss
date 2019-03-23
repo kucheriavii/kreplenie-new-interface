@@ -831,6 +831,19 @@ Slider (main page)
     .cash-back--link{
         text-decoration: underline;
         color: #f44336;
+        color: #f44336;
+            text-decoration: underline;
+            text-decoration: none;
+            border-bottom: .1em dashed #f44336;
+            height: 30px;
+                &:hover, &:focus, &:active{
+                    text-decoration: none;
+                    background: #fef2b8;
+                    color: #f44336;
+                    text-decoration: none;
+                    border-bottom: none;
+                    margin-bottom: 2px;
+                }
     }
 }
 .rating{
@@ -1179,13 +1192,14 @@ span.feedback{
 }
 /*Основные теги для описания товара*/
 .item-main-menu__full-block-description{
-    h3{
+    h2{
         font: 17px $font-semibold;
         margin-top: 35px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
-    h4{
+    h3, h4, h5, h6{
         font: 16px $font-semibold;
+        margin-bottom: 20px;
     }
     p{
         font: 14px "OpenSans-Regular", sans-serif;
@@ -1193,10 +1207,13 @@ span.feedback{
     a{
         color: #f44336;
         text-decoration: underline;
+        text-decoration: none;
+        border-bottom: .1em dashed #f44336;
         &:hover{
             background: #fef2b8;
             color: #f44336;
             text-decoration: none;
+            border-bottom: none;
         }
     }
     .item-main-menu__gallery-box{
@@ -1263,7 +1280,7 @@ span.feedback{
             &:nth-child(2n+1){
                 background-color: #f7f7f7;
             }
-            td{
+            td, th{
                 width: 50%;
                 padding-left: 20px;
                 font: 14px "OpenSans-Regular", sans-serif;
@@ -1272,20 +1289,16 @@ span.feedback{
                     text-decoration: underline;
                 }
             }
-            &:first-child{
+          
+            th{
                 height: 55px;
-                border: 1px solid #eaeaea;
-                border-left: none;
-                border-right: none;
-                width: 100%;
-                td{
-                    width: 50%;
-                    align-items: center;
-                    padding-left: 20px;
-                    font: 16px $font-semibold;
-                    text-transform: uppercase;
-                }
+                width: 50%;
+                align-items: center;
+                padding-left: 20px;
+                font: 16px $font-semibold;
+                text-transform: uppercase;
             }
+            
         }
     }
     .item-main-menu__desc-ol{
@@ -1376,6 +1389,8 @@ span.feedback{
         display: inline-block;
         margin-top: 10px;
         text-decoration: none;
+        margin-top: 40px;
+        margin-bottom: 20px;
     }
     dfn{
         display: inline-block;
@@ -4421,11 +4436,25 @@ span.feedback{
             }
         }
         .info-link{
-            font: 14px/30px "OpenSans-Bold", sans-serif;
+            font: 14px "OpenSans-Bold", sans-serif;
             color: #333333;
             position: relative;
-            padding-right: 10px;
+            margin-right: 10px;
             padding-bottom: 2px;
+            text-decoration: underline;
+            color: #f44336;
+            text-decoration: underline;
+            text-decoration: none;
+            border-bottom: .1em dashed #f44336;
+                &:hover, &:focus, &:active{
+                    @extend .info-link;
+                    text-decoration: none;
+                    background: #fef2b8;
+                    color: #f44336;
+                    text-decoration: none;
+                    border-bottom: none;
+                    margin-bottom: 2px;
+                }
             &:before{
                 content:"";
                 display: block;
@@ -4521,7 +4550,17 @@ span.feedback{
             color: #f44336;
             font: 14px "OpenSans-Bold", sans-serif;
             position: relative;
-            padding-right: 10px;
+            margin-right: 10px;
+            border-bottom: 0.1em dashed #f44336;
+            display: inline-block;
+             &:hover, &:focus, &:active{
+                    text-decoration: none;
+                    background: #fef2b8;
+                    color: #f44336;
+                    text-decoration: none;
+                    border-bottom: none;
+                    margin-bottom: 2px;
+                }
             &:before{
                 content: "";
                 background: url("../img/wallet-icon.png");
@@ -4687,6 +4726,7 @@ span.feedback{
             font: 14px "OpenSans-SemiBold", sans-serif;
             padding-right: 10px;
             margin-bottom: 6px;
+            text-decoration: none;
         }
         .item-detail{
             display: flex;
@@ -4747,7 +4787,24 @@ span.feedback{
                  &.no-active{
                      color: #333;
                      text-decoration: none;
+                     border: none;
+                     &:hover, &:focus, &:active{
+                         background: none;
+                         color: #333;
+                     }
                  }
+                 color: #f44336;
+                text-decoration: underline;
+                text-decoration: none;
+                border-bottom: .1em dashed #f44336;
+                &:hover, &:focus, &:active{
+                    text-decoration: none;
+                    background: #fef2b8;
+                    color: #f44336;
+                    text-decoration: none;
+                    border-bottom: none;
+                    margin-bottom: 2px;
+                }
              }
          }
          .main-characteristic-all{

@@ -4907,6 +4907,20 @@ Slider (main page)
 .cash-back .cash-back--link {
   text-decoration: underline;
   color: #f44336;
+  color: #f44336;
+  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: .1em dashed #f44336;
+  height: 30px;
+}
+
+.cash-back .cash-back--link:hover, .cash-back .cash-back--link:focus, .cash-back .cash-back--link:active {
+  text-decoration: none;
+  background: #fef2b8;
+  color: #f44336;
+  text-decoration: none;
+  border-bottom: none;
+  margin-bottom: 2px;
 }
 
 .rating {
@@ -5376,14 +5390,15 @@ span.feedback {
 }
 
 /*Основные теги для описания товара*/
-.item-main-menu__full-block-description h3 {
+.item-main-menu__full-block-description h2 {
   font: 17px "OpenSans-SemiBold", sans-serif;
   margin-top: 35px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.item-main-menu__full-block-description h4 {
+.item-main-menu__full-block-description h3, .item-main-menu__full-block-description h4, .item-main-menu__full-block-description h5, .item-main-menu__full-block-description h6 {
   font: 16px "OpenSans-SemiBold", sans-serif;
+  margin-bottom: 20px;
 }
 
 .item-main-menu__full-block-description p {
@@ -5393,12 +5408,15 @@ span.feedback {
 .item-main-menu__full-block-description a {
   color: #f44336;
   text-decoration: underline;
+  text-decoration: none;
+  border-bottom: .1em dashed #f44336;
 }
 
 .item-main-menu__full-block-description a:hover {
   background: #fef2b8;
   color: #f44336;
   text-decoration: none;
+  border-bottom: none;
 }
 
 .item-main-menu__full-block-description .item-main-menu__gallery-box {
@@ -5498,26 +5516,19 @@ span.feedback {
   background-color: #f7f7f7;
 }
 
-.item-main-menu__full-block-description table tr td {
+.item-main-menu__full-block-description table tr td, .item-main-menu__full-block-description table tr th {
   width: 50%;
   padding-left: 20px;
   font: 14px "OpenSans-Regular", sans-serif;
 }
 
-.item-main-menu__full-block-description table tr td a {
+.item-main-menu__full-block-description table tr td a, .item-main-menu__full-block-description table tr th a {
   color: #f44336;
   text-decoration: underline;
 }
 
-.item-main-menu__full-block-description table tr:first-child {
+.item-main-menu__full-block-description table tr th {
   height: 55px;
-  border: 1px solid #eaeaea;
-  border-left: none;
-  border-right: none;
-  width: 100%;
-}
-
-.item-main-menu__full-block-description table tr:first-child td {
   width: 50%;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -5652,6 +5663,8 @@ span.feedback {
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .item-main-menu__full-block-description dfn {
@@ -7804,13 +7817,13 @@ span.feedback {
   color: #bdbdbd;
 }
 
-.info-link, .info-link:hover, .info-link:focus, .info-link:active {
+.info-link, .info-link:hover, .info-link:focus, .info-link:active, .item-infoblock .infoblock-feedback .info-link:hover, .item-infoblock .infoblock-feedback .info-link:focus, .item-infoblock .infoblock-feedback .info-link:active {
   font: 12px "OpenSans-Regular", sans-serif;
   text-decoration: underline;
   color: #5856d6;
 }
 
-.info-link:hover, .info-link:focus, .info-link:active {
+.info-link:hover, .item-infoblock .infoblock-feedback .info-link:hover, .info-link:focus, .item-infoblock .infoblock-feedback .info-link:focus, .info-link:active, .item-infoblock .infoblock-feedback .info-link:active {
   text-decoration: none;
 }
 
@@ -9717,15 +9730,29 @@ span.feedback {
   border-bottom: 1px solid #000;
 }
 
-.item-infoblock .infoblock-feedback .info-link {
-  font: 14px/30px "OpenSans-Bold", sans-serif;
+.item-infoblock .infoblock-feedback .info-link, .item-infoblock .infoblock-feedback .info-link:hover, .item-infoblock .infoblock-feedback .info-link:focus, .item-infoblock .infoblock-feedback .info-link:active {
+  font: 14px "OpenSans-Bold", sans-serif;
   color: #333333;
   position: relative;
-  padding-right: 10px;
+  margin-right: 10px;
   padding-bottom: 2px;
+  text-decoration: underline;
+  color: #f44336;
+  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: .1em dashed #f44336;
 }
 
-.item-infoblock .infoblock-feedback .info-link:before {
+.item-infoblock .infoblock-feedback .info-link:hover, .item-infoblock .infoblock-feedback .info-link:focus, .item-infoblock .infoblock-feedback .info-link:active {
+  text-decoration: none;
+  background: #fef2b8;
+  color: #f44336;
+  text-decoration: none;
+  border-bottom: none;
+  margin-bottom: 2px;
+}
+
+.item-infoblock .infoblock-feedback .info-link:before, .item-infoblock .infoblock-feedback .info-link:hover:before, .item-infoblock .infoblock-feedback .info-link:focus:before, .item-infoblock .infoblock-feedback .info-link:active:before {
   content: "";
   display: block;
   background-image: url("../img/comments-icon.png");
@@ -9853,7 +9880,18 @@ span.feedback {
   color: #f44336;
   font: 14px "OpenSans-Bold", sans-serif;
   position: relative;
-  padding-right: 10px;
+  margin-right: 10px;
+  border-bottom: 0.1em dashed #f44336;
+  display: inline-block;
+}
+
+.item-infoblock .feedback-delivery__infoblock .feedback-delivery__infoblock-link:hover, .item-infoblock .feedback-delivery__infoblock .feedback-delivery__infoblock-link:focus, .item-infoblock .feedback-delivery__infoblock .feedback-delivery__infoblock-link:active {
+  text-decoration: none;
+  background: #fef2b8;
+  color: #f44336;
+  text-decoration: none;
+  border-bottom: none;
+  margin-bottom: 2px;
 }
 
 .item-infoblock .feedback-delivery__infoblock .feedback-delivery__infoblock-link:before {
@@ -10080,6 +10118,7 @@ span.feedback {
   font: 14px "OpenSans-SemiBold", sans-serif;
   padding-right: 10px;
   margin-bottom: 6px;
+  text-decoration: none;
 }
 
 .item-infoblock .other-items .item-detail {
@@ -10168,11 +10207,30 @@ span.feedback {
   color: #1e88e5;
   text-decoration: underline;
   white-space: nowrap;
+  color: #f44336;
+  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: .1em dashed #f44336;
 }
 
 .item-infoblock .main-characteristic .main-characteristic-list .main-characteristic-val.no-active {
   color: #333;
   text-decoration: none;
+  border: none;
+}
+
+.item-infoblock .main-characteristic .main-characteristic-list .main-characteristic-val.no-active:hover, .item-infoblock .main-characteristic .main-characteristic-list .main-characteristic-val.no-active:focus, .item-infoblock .main-characteristic .main-characteristic-list .main-characteristic-val.no-active:active {
+  background: none;
+  color: #333;
+}
+
+.item-infoblock .main-characteristic .main-characteristic-list .main-characteristic-val:hover, .item-infoblock .main-characteristic .main-characteristic-list .main-characteristic-val:focus, .item-infoblock .main-characteristic .main-characteristic-list .main-characteristic-val:active {
+  text-decoration: none;
+  background: #fef2b8;
+  color: #f44336;
+  text-decoration: none;
+  border-bottom: none;
+  margin-bottom: 2px;
 }
 
 .item-infoblock .main-characteristic .main-characteristic-all {
