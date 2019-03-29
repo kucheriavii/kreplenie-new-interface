@@ -1190,6 +1190,18 @@ span.feedback{
     }
   }
 }
+/*Правки видеоконтент*/
+.item-description-text iframe{
+    max-width: 100% !important;
+}
+.item-description-text img{
+    max-width: 100%;
+}
+@media screen and (max-width: 580px) {
+    .item-description-text iframe{
+        height: auto;
+    }
+}
 /*Основные теги для описания товара*/
 .item-main-menu__full-block-description{
     h2{
@@ -1484,7 +1496,9 @@ span.feedback{
   &.disactive{
     opacity: 0.5;
   }
+    
 }
+
 .leave-feedback{
   &__wrapper{
     display: none;
@@ -3069,15 +3083,22 @@ span.feedback{
 	padding-top: 10px;
 }
 .pdf_download, .jpg_download{
-  display: flex;
+  display: inline-flex;
   height: 32px;
   align-items: center;
   font-size: 14px;
   text-decoration: underline;
   color: #5856d6;
+    color: #f44336;
+    text-decoration: underline;
+    text-decoration: none;
   &:hover,&:active,&:focus{
     text-decoration: underline;
     color: #5000d6;
+          background: #fef2b8;
+    color: #f44336;
+    text-decoration: none;
+    border-bottom: none;
   }
   &:before{
     content: "";
@@ -4329,7 +4350,10 @@ span.feedback{
         padding-left: 10px;
         padding-right: 10px;
         display: flex;
-				margin-bottom: 30px;
+        margin-bottom: 10px;
+        &.no-item{
+            margin-bottom: 30px;
+        }
         .button--buy{
             margin-bottom: 0px;
             width: 200px;

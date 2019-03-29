@@ -5,7 +5,7 @@
 
 
 @include media-breakpoint-down(lg) {
-
+    
 }
 
 // ≥1366px
@@ -297,7 +297,9 @@
 
 // ≤576px
 @include media-breakpoint-up(sm) {
-
+    .item-description-text iframe{
+        height: auto;
+    }
 }
 
 // ≤768px
@@ -319,4 +321,21 @@
       margin-right: auto;
     }
   }
+
+    .item-slider{
+        width: 900px;
+        .item-img{
+            width: 100%;
+        }
+        .item__slider-wrap{
+            width: 930px;
+        }
+        .slider__item-link{
+            width: 820px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
 }

@@ -5389,6 +5389,21 @@ span.feedback {
   font-size: 12px;
 }
 
+/*Правки видеоконтент*/
+.item-description-text iframe {
+  max-width: 100% !important;
+}
+
+.item-description-text img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 580px) {
+  .item-description-text iframe {
+    height: auto;
+  }
+}
+
 /*Основные теги для описания товара*/
 .item-main-menu__full-block-description h2 {
   font: 17px "OpenSans-SemiBold", sans-serif;
@@ -7879,10 +7894,10 @@ span.feedback {
 }
 
 .pdf_download, .jpg_download {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   height: 32px;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -7891,11 +7906,18 @@ span.feedback {
   font-size: 14px;
   text-decoration: underline;
   color: #5856d6;
+  color: #f44336;
+  text-decoration: underline;
+  text-decoration: none;
 }
 
 .pdf_download:hover, .pdf_download:active, .pdf_download:focus, .jpg_download:hover, .jpg_download:active, .jpg_download:focus {
   text-decoration: underline;
   color: #5000d6;
+  background: #fef2b8;
+  color: #f44336;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .pdf_download:before, .jpg_download:before {
@@ -9585,6 +9607,10 @@ span.feedback {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 10px;
+}
+
+.item-infoblock .price-block.no-item {
   margin-bottom: 30px;
 }
 
@@ -10603,10 +10629,31 @@ span.feedback {
 }
 
 /*==========  Mobile First  ==========*/
+@media (min-width: 1024px) {
+  .item-description-text iframe {
+    height: auto;
+  }
+}
+
 @media (min-width: 1800px) {
   .bgc-grey .container, .logo-and-contacts .container, .header-menu .container {
     /* max-width: 1366px;*/
     margin-left: auto;
     margin-right: auto;
+  }
+  .item-slider {
+    width: 900px;
+  }
+  .item-slider .item-img {
+    width: 100%;
+  }
+  .item-slider .item__slider-wrap {
+    width: 930px;
+  }
+  .item-slider .slider__item-link {
+    width: 820px;
+  }
+  .item-slider .slider__item-link img {
+    width: 100%;
   }
 }
