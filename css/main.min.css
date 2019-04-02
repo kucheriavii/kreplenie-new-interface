@@ -7917,7 +7917,7 @@ span.feedback {
   background: #fef2b8;
   color: #f44336;
   text-decoration: none;
-  border-bottom: none;
+  border-bottom: 1px dashed;
 }
 
 .pdf_download:before, .jpg_download:before {
@@ -7927,6 +7927,9 @@ span.feedback {
   width: 30px;
   height: 32px;
   margin-right: 5px;
+  margin-bottom: 0px;
+  z-index: 44444;
+  background-color: #fff;
 }
 
 .jpg_download {
