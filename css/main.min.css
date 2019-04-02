@@ -7909,6 +7909,7 @@ span.feedback {
   color: #f44336;
   text-decoration: underline;
   text-decoration: none;
+  border-bottom: 1px dashed;
 }
 
 .pdf_download:hover, .pdf_download:active, .pdf_download:focus, .jpg_download:hover, .jpg_download:active, .jpg_download:focus {
@@ -7917,17 +7918,17 @@ span.feedback {
   background: #fef2b8;
   color: #f44336;
   text-decoration: none;
-  border-bottom: 1px dashed;
 }
 
 .pdf_download:before, .jpg_download:before {
   content: "";
   display: block;
   background-image: url("../img/pdf-icon.png");
+  background-repeat: no-repeat;
   width: 30px;
-  height: 32px;
+  height: 34px;
   margin-right: 5px;
-  margin-bottom: 0px;
+  margin-bottom: -3px;
   z-index: 44444;
   background-color: #fff;
 }

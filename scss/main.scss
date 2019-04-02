@@ -3092,22 +3092,24 @@ span.feedback{
     color: #f44336;
     text-decoration: underline;
     text-decoration: none;
+    border-bottom: 1px dashed;
   &:hover,&:active,&:focus{
     text-decoration: underline;
     color: #5000d6;
           background: #fef2b8;
     color: #f44336;
     text-decoration: none;
-    border-bottom: 1px dashed;
+    
   }
   &:before{
     content: "";
     display: block;
     background-image: url("../img/pdf-icon.png");
+      background-repeat: no-repeat;
     width: 30px;
-    height: 32px;
+    height: 34px;
     margin-right: 5px;
-    margin-bottom: 0px;
+    margin-bottom: -3px;
     z-index: 44444;
     background-color: #fff;
   }
